@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reducer Array Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input {
+      width: 300px;
+      padding: 8px;
+    }
+    button {
+      padding: 8px 12px;
+      margin-left: 5px;
+    }
+    p {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Reducer: Sum & Max</h2>
+
+  <input type="text" id="arrayInput">
+  <button onclick="calculate()">Calculate</button>
+
+  <p id="sumResult"></p>
+  <p id="maxResult"></p>
+
+  <script>
+    function calculate() {
+      const input = document.getElementById("arrayInput").value;
+
+      const arr = input.split(",").map(Number);
+
+      if (arr.length === 0 || arr.some(isNaN)) {
+        alert("Please enter valid numbers separated by commas.");
+        return;
+      }
+
+      const totalSum = arr.reduce((sum, num) => sum + num, 0);
+      const maxElement = arr.reduce((max, num) => num > max ? num : max, arr[0]);
+
+      document.getElementById("sumResult").innerText =
+        "Total Sum: " + totalSum;
+      document.getElementById("maxResult").innerText =
+        "Max Element: " + maxElement;
+    }
+  </script>
+
+</body>
+</html>
