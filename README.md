@@ -6,3 +6,7 @@
 ## 30-12-25
 1)Learned about the Shell Scripting and Javascript and Completed the task on JavaScript
 
+## 30-12-25
+1)Learned about the Promise,Callbacks, Array, Map, Reduce Filter and some JS Functions and completed the task on the Reducer.
+
+
